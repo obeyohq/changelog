@@ -19,7 +19,6 @@ import Link from "next/link";
 import { Contributor } from "components/contributor";
 import Footer from "components/core/footer";
 import Navbar from "components/core/navbar";
-import { TryBanner } from "components/core/try-banner";
 import { MdxMeta } from "lib/models/mdx-meta";
 import { defaultPx } from "lib/utils/default-container-px";
 
@@ -120,7 +119,6 @@ export const MdxLayout = (props: MdxLayoutProps) => {
           </Box>
           {!props.hideLayout && (
             <>
-              <TryBanner _wrapper={{ my: [50, 50, 120] }} />
               <Footer _wrapper={{ mt: [50, 50, 120], mb: 20 }} />
             </>
           )}

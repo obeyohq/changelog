@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import Link from 'next/link';
-import { defaultPx } from 'lib/utils/default-container-px';
-import { DesktopNavItem } from 'components/core/navbar/desktop-nav-item';
-import { HamburgerMenu } from 'components/core/custom-icons/hamburger-icon';
-import { CloseIcon } from 'components/core/custom-icons/close-icon';
-import { Box, Button, Container, Flex, HStack, Image, Stack, Text } from '@chakra-ui/react';
+import { useState } from "react";
+import Link from "next/link";
+import { defaultPx } from "lib/utils/default-container-px";
+import { DesktopNavItem } from "components/core/navbar/desktop-nav-item";
+import { HamburgerMenu } from "components/core/custom-icons/hamburger-icon";
+import { CloseIcon } from "components/core/custom-icons/close-icon";
+import { Box, Button, Container, Flex, HStack, Image, Stack, Text } from "@chakra-ui/react";
 
 const MOBILE_MENU_COLOR = "#241f47";
 const MOBILE_FONT_WEIGHT = 600;
@@ -16,13 +16,8 @@ const ROUTES = [
     type: "internal-link",
   },
   {
-    href: process.env.NEXT_PUBLIC_MARKETING_HOST + "/customer-stories",
-    title: "Customers",
-    type: "external-link",
-  },
-  {
-    href: "https://qualify.june.so",
-    title: "Qualification",
+    href: process.env.NEXT_PUBLIC_MARKETING_HOST + "/product",
+    title: "Product",
     type: "external-link",
   },
   {
@@ -54,7 +49,7 @@ export default function Navbar(props: Props) {
           <Flex direction="column">
             <Flex align="center" justify="space-between">
               <Flex p={4} as="a" href={process.env.NEXT_PUBLIC_MARKETING_HOST}>
-                <Image h={12} src="/june-logo-small.svg" alt="june-logo" />
+                <Image h={8} src="/obeyo-logo.svg" alt="Obeyo Logo" />
               </Flex>
               <Flex p={4} onClick={toggle}>
                 <Box pr={1}>
@@ -69,7 +64,7 @@ export default function Navbar(props: Props) {
           <Flex direction="column">
             <Flex align="center" justify="space-between">
               <Flex p={4} as="a" href={process.env.NEXT_PUBLIC_MARKETING_HOST}>
-                <Image h={12} src="/june-logo-small.svg" alt="june-logo" />
+                <Image h={30} src="/obeyo-logo.svg" alt="Obeyo Logo" />
               </Flex>
               <Flex p={4} onClick={toggle}>
                 <Box>
@@ -97,27 +92,17 @@ export default function Navbar(props: Props) {
           <Flex
             align="center"
             as="a"
-            href="https://changelog.june.so/"
+            href={process.env.NEXT_PUBLIC_APP_HOST}
             style={{ textDecoration: "none" }}
           >
             <Text fontSize="4xl" fontWeight="bold" color={MOBILE_MENU_COLOR}>
               Changelog
             </Text>
           </Flex>
-          <Link
-            prefetch={false}
-            href={`${process.env.NEXT_PUBLIC_MARKETING_HOST}/customer-stories`}
-          >
+          <Link prefetch={false} href={`${process.env.NEXT_PUBLIC_MARKETING_HOST}/product`}>
             <Flex align="center" style={{ textDecoration: "none" }}>
               <Text fontSize="4xl" fontWeight="bold" color={MOBILE_MENU_COLOR}>
-                Customers
-              </Text>
-            </Flex>
-          </Link>
-          <Link prefetch={false} href={`${process.env.NEXT_PUBLIC_MARKETING_HOST}/templates`}>
-            <Flex align="center" style={{ textDecoration: "none" }}>
-              <Text fontSize="4xl" fontWeight="bold" color={MOBILE_MENU_COLOR}>
-                Templates
+                Product
               </Text>
             </Flex>
           </Link>
@@ -172,7 +157,7 @@ export default function Navbar(props: Props) {
           {/* Logo */}
           <Link href={process.env.NEXT_PUBLIC_MARKETING_HOST} passHref prefetch={false}>
             <Flex display={["none", "none", "block"]} cursor="pointer">
-              <Image h={8} src="/June-logo.svg" alt="june-logo" />
+              <Image h={30} src="/obeyo-logo.svg" alt="Obeyo logo" />
             </Flex>
           </Link>
           {/* Navigation items */}

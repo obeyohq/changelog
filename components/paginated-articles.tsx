@@ -1,11 +1,10 @@
-import { ReactNode } from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
-import { defaultPx } from 'lib/utils/default-container-px';
-import { TryBanner } from 'components/core/try-banner';
-import Navbar from 'components/core/navbar';
-import Footer from 'components/core/footer';
-import { Box, Button, Container, Divider, Heading, HStack, Text, VStack } from '@chakra-ui/react';
+import { Box, Button, Container, Divider, Heading, HStack, Text, VStack } from "@chakra-ui/react";
+import Footer from "components/core/footer";
+import Navbar from "components/core/navbar";
+import { defaultPx } from "lib/utils/default-container-px";
+import Head from "next/head";
+import Link from "next/link";
+import { ReactNode } from "react";
 
 export interface PaginatedArticlesProps {
   page: number;
@@ -74,7 +73,6 @@ export const PaginatedArticles = ({ page, children }: PaginatedArticlesProps) =>
             </VStack>
           </VStack>
         </Container>
-        <TryBanner _wrapper={{ my: [50, 50, 120] }} />
         <Footer _wrapper={{ mt: [50, 50, 120], mb: 20 }} />
       </Box>
     </>
